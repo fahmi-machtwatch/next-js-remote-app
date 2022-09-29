@@ -12,9 +12,9 @@ const Page1: FunctionComponent = () => {
         onCloseComplete={() => setIsShown(false)}
         confirmLabel="Submit"
       >
-        Dialog content for v1.0.0
+        Dialog content for v1.1.0
       </Dialog>
-      <Button onClick={() => setIsShown(true)}>Show Dialog v1.0.0</Button>
+      <Button onClick={() => setIsShown(true)}>Show Dialog v1.1.0</Button>
     </Pane>
   )
 };
