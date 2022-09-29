@@ -3,14 +3,13 @@ import path from 'path';
 import { api } from '../../utils/api';
 
 const WHITELISTED = process.env.WHITELISTED_DOMAIN;
+const HOST = process.env.HOST;
+
 const handler = api().get(async (req, res) => {
   if (req.headers.referer === WHITELISTED) {
     try {
-      const isProduction = process.env.NODE_ENV === 'production';
-      const remoteEntryPath = isProduction ? '_next/static/runtime/remoteEntry.js' : '.next/static/runtime/remoteEntry.js'
-      const filePath = path.join(process.cwd(), remoteEntryPath);
-      const file = fs.readFileSync(filePath, { encoding: 'utf-8' });
-      return res.send(file);
+      const file = await fetch(`${HOST}/_next/static/runtime/remoteEntry.js`)
+      return res.send(file.body);
     } catch (error) {
       console.log(error);
       return error;
