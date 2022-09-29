@@ -22,6 +22,7 @@ module.exports = withFederatedSidecar({
     }
   }
 })({
+  experimental: { nftTracing: true },
   webpack: config => {
     config.output.publicPath = `${process.env.HOST}/_next/`;
     return config;
