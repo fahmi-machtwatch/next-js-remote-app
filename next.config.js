@@ -3,7 +3,7 @@ const deps = packages.dependencies
 const { withFederatedSidecar } = require("@module-federation/nextjs-mf");
 
 module.exports = withFederatedSidecar({
-  name: "accountPlatform",
+  name: "accounts",
   filename: "static/runtime/remoteEntry.js",
   exposes: {
     './page1': './components/page1',
