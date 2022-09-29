@@ -6,7 +6,9 @@ module.exports = withFederatedSidecar({
   name: "accountPlatform",
   filename: "static/runtime/remoteEntry.js",
   exposes: {
-    './page1': './components/page1'
+    './page1': './components/page1',
+    './createUser': './components/form',
+    './listUsers': './components/table',
   },
   shared: {
     ...deps,
