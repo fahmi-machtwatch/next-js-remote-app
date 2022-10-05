@@ -14,7 +14,8 @@
     "next": "^12.3.0",
     "next-connect": "^0.13.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "windowed-observable": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
